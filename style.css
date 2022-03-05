@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  background-color: hsl(0, 0%, 98%);
+}
+:root {
+  --color-title: hsl(234, 12%, 34%);
+}
+@media screen and (min-width: 360px) {
+  .container-main {
+    margin: 5.2rem 2rem;
+  }
+  .title-intro {
+    font-size: 24.2px;
+    font-weight: 200;
+    color: var(--color-title);
+    text-align: center;
+  }
+  .title-intro span {
+    font-weight: 600;
+  }
+  .desc-intro {
+    font-size: 15.3px;
+    color: hsl(229, 6%, 66%);
+    text-align: center;
+    margin-top: 1rem;
+  }
+  /*-------------------------------cards-------------*/
+  .container-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'card-1'
+      'card-2'
+      'card-3'
+      'card-4';
+    row-gap: 1.5rem;
+    margin-top: 5rem;
+  }
+  .card {
+    display: grid;
+    background-color: #fff;
+    box-shadow: 0rem 0.5rem 1rem 0rem hsla(212, 86%, 64%, 0.199);
+    padding: 1.45rem 1.8rem;
+    border-radius: 0.5rem;
+  }
+  .card-1 {
+    grid-area: card-1;
+    border-top: 4px solid hsl(180, 62%, 55%);
+  }
+  .card-2 {
+    grid-area: card-2;
+    border-top: 4px solid hsl(0, 78%, 62%);
+  }
+  .card-3 {
+    grid-area: card-3;
+    border-top: 4px solid hsl(34, 97%, 64%);
+  }
+  .card-4 {
+    grid-area: card-4;
+    border-top: 4px solid hsl(212, 86%, 64%);
+  }
+  .title-card {
+    font-size: 20px;
+    color: var(--color-title);
+  }
+  .desc-card {
+    font-size: 13px;
+    color: hsl(229, 6%, 66%);
+    margin-top: 0.2rem;
+    line-height: 1.5rem;
+  }
+  .icon-card {
+    width: 57px;
+    height: 57px;
+    margin-top: 1.45rem;
+    margin-left: 12.3rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container-main {
+    margin: 5.2rem 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .title-intro {
+    font-size: 36px;
+  }
+  .desc-intro {
+    width: 50%;
+  }
+  /*-------------------------------cards-------------*/
+  .container-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      'card-1 card-2 card-4'
+      '. card-3 .';
+    gap: 2rem 2rem;
+    margin-top: 4rem;
+  }
+  .card {
+    max-height: 230.75px;
+    max-width: 347px;
+    padding: 1.45rem 1.8rem 2rem 1.8rem;
+  }
+
+  .card-1 {
+    grid-area: card-1;
+    margin-top: 8rem;
+    border-top: 4px solid hsl(180, 62%, 55%);
+  }
+  .card-2 {
+    grid-area: card-2;
+    border-top: 4px solid hsl(0, 78%, 62%);
+  }
+  .card-3 {
+    grid-area: card-3;
+    margin-top: -8rem;
+    border-top: 4px solid hsl(34, 97%, 64%);
+  }
+  .card-4 {
+    grid-area: card-4;
+    margin-top: 8rem;
+    border-top: 4px solid hsl(212, 86%, 64%);
+  }
+  .desc-card {
+    margin-top: 0.5rem;
+  }
+  .icon-card {
+    width: 62px;
+    height: 62px;
+    margin-top: 2.3rem;
+    margin-left: 14rem;
+  }
+}
